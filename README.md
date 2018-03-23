@@ -34,3 +34,4 @@ For example:
 ```
 terraform apply -var 'key_name=terraform' -var 'public_key_path=/Users/jsmith/.ssh/terraform.pub'
 ```
+# terraform-two-tier-test
