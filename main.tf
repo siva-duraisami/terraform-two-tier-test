@@ -99,8 +99,8 @@ resource "aws_elb" "web" {
 
 resource "aws_key_pair" "auth" {
   key_name   = "${var.key_name}"
-  #public_key = "${file(var.public_key_path)}"
-  public_key = "${file("${path.module}/keys/id_rsa.pub")}
+  public_key = "${file(var.public_key_path)}"
+  #public_key = "${file("${path.module}/keys/id_rsa.pub")}
 }
 
 resource "aws_instance" "web" {
@@ -109,7 +109,7 @@ resource "aws_instance" "web" {
   connection {
     # The default username for our AMI
     user = "ubuntu"
-    private_key = "${file("${path.module}/keys/id_rsa")}"
+    #private_key = "${file("${path.module}/keys/id_rsa")}"
     # The connection will use the local SSH agent for authentication.
   }
 
