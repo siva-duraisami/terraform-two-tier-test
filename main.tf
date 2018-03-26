@@ -99,7 +99,7 @@ resource "aws_elb" "web" {
 
 resource "aws_key_pair" "auth" {
   key_name   = "${var.key_name}"
-  public_key = "${file(var.public_key_path)}"
+  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCspMW7pLWe9dfZnqnWESKb9VaEIoYvO0x5s8yxsyyFSu6TFvO+zNcWPldDY8y4Apaw1CVPP1Wbead9g6xMq8lHEbkNRsXqrhzqodtY8OCH0jWBfzTluux4ktMMp7F004J20APQL+RddmDK0Zh8uQVaTsQCrTLJpjxOqsmV3G649oe/DLPGcqwqnFewxaLn4GuFLy1+DM3pL7/uTe/ECJuSYyoTnk4Xi/p2nuKmYrMDK8QTS6fyENb0dnfc9yC4Eb3pzHLTJsErFwVtxIm3DjJeXut/casGAmpxhsUPvLNT+sV6c4zrymhi5O8eTEWrnQ1zaJFuy1aCSzO7iIdcY1Cp ec2-user@us-west-2a-te-agent-test"
   #public_key = "${file("${path.module}/keys/id_rsa.pub")}
 }
 
