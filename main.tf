@@ -110,7 +110,7 @@ resource "aws_instance" "web" {
     # The default username for our AMI
     user = "ubuntu"
     #private_key = "${file("${path.module}/keys/id_rsa")}"
-    key_file = "${file("/tmp/pkey")}"
+    private_key = "${file("/tmp/pkey")}"
     agent = "false"
     # The connection will use the local SSH agent for authentication.
   }
